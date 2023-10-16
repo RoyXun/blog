@@ -1,0 +1,82 @@
+baseURL = 'https://royxun.cool/blog/'
+languageCode = 'zh-cn'
+title = '懒人笔记'
+theme = 'stack'
+disqusShortname = 'royxun'
+hasCJKLanguage = true
+
+[permalinks]
+post = '/article/:slug/'
+page = '/:slug/'
+
+[params]
+favicon = '/favicon.ico'
+
+[params.sidebar]
+[params.sidebar.avatar]
+enabled = true
+local = true
+src = 'img/avatar.jpeg'
+
+[params.article]
+toc = true
+readingTime = false
+
+[params.comments]
+enabled = true
+provider = 'disqus'
+
+[params.widgets]
+[[params.widgets.homepage]]
+type = 'search'
+
+[[params.widgets.homepage]]
+type = 'categories'
+[params.widgets.homepage.params]
+limit = 10
+
+[[params.widgets.homepage]]
+type = 'tag-cloud'
+[params.widgets.homepage.params]
+limit = 5
+
+[[params.widgets.page]]
+type = 'toc'
+
+[params.colorScheme]
+toggle = true
+default = 'auto'
+
+[menu]
+[[menu.social]]
+name = 'Github'
+identifier = 'github'
+url = 'https://github.com/RoyXun'
+['menu.social'.params]
+icon = 'brand-github'
+
+[related]
+includeNewer = true
+threshold = 60
+toLower = false
+[[related.indices]]
+name = 'tags'
+weight = 100
+[[related.indices]]
+name = 'categories'
+weight = 200
+
+[markup]
+[markup.tableOfContents]
+endLevel = 4
+ordered = true
+startLevel = 2
+
+[markup.highlight]
+noClasses = false
+codeFences = true
+guessSyntax = true
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+tabWidth = 4
