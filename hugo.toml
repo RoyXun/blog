@@ -52,7 +52,7 @@ default = 'auto'
 name = 'Github'
 identifier = 'github'
 url = 'https://github.com/RoyXun'
-['menu.social'.params]
+[menu.social.params]
 icon = 'brand-github'
 
 [related]
