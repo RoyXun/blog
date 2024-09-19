@@ -2,7 +2,7 @@
 slug = 'element-plus-table-nested-column'
 title = 'el-table表头分组实现'
 date = 2024-09-19T20:18:47+08:00
-draft = true
+draft = false
 tags = ['element-plus', 'table']
 categories = ['踩坑心得']
 +++
