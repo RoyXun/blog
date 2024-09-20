@@ -43,7 +43,7 @@ const tableData = [
 
 对于数据驱动表格列渲染业务场景，具体有几层 `el-table-column` 嵌套完全由数据决定，自然而然会想到使用递归。而 `template` 中没法直接使用函数递归渲染 `el-table-column` 组件，需要将 `template` 改为 `render` 函数或 `jsx/tsx` 形式，对页面改动较大，最理想的方式还是封装一个独立组件，将递归渲染 `el-table-column` 的逻辑抽取到独立组件中。
 
-### 组件封装
+## 组件封装
 
 我们简单封装一个名为 `NestedColumn` 的组件，该组件接收嵌套的表格列属性，同时需要暴露`el-table-column` 的 3 个插槽：
 
@@ -170,7 +170,7 @@ const tableData = [
 
 ![渲染失败demo](demo1.png)
 
-### 问题分析
+## 问题分析
 
 翻阅 `el-table` 源码，会发现 `el-table-column` 的 render 函数中有守卫条件：
 
@@ -214,7 +214,7 @@ render() {
 
 `el-table-column` render 函数中判断了子节点只能是 `el-table-column` 或函数式组件，猜测可能是因为`el-table` 的实现机制是声明式组件嵌套，而非配置式传入表格列属性，为了过滤掉插槽中的无效节点。递归组件因不符合条件而被过滤掉，于是我们的思路就转变为用函数式组件重新封装组件。
 
-### 组件重构
+## 组件重构
 
 ```tsx
 import type { SetupContext, PropType } from "vue";
@@ -289,6 +289,6 @@ import NestedColumn from "./NestedColumn";
 
 ![渲染成功demo](demo2.png)
 
-### 总结
+## 总结
 
 `el-table` 没有提供配置式渲染嵌套表格列方式，封装独立组件递归渲染表格列实现表头分组功能只能使用函数式组件方式。
