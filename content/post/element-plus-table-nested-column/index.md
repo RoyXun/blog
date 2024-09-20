@@ -103,8 +103,9 @@ const props = defineProps<INestedColumnProps>();
 <template>
   <el-table :data="tableData" border style="width: 100%">
     <NestedColumn :columns="columns">
-      <template #header="{ column, $index }">
-        {{ $index }}: {{ column.label }}
+      <template #header="{ column }"> 【{{ column.label }}】 </template>
+      <template #default="{ row, column }">
+        -- {{ row[column.property] }} --
       </template>
     </NestedColumn>
   </el-table>
@@ -280,6 +281,8 @@ NestedColumn.props = {
 </template>
 
 <script lang="ts" setup>
+import NestedColumn from "./NestedColumn";
+
 // ...同上
 </script>
 ```
