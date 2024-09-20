@@ -10,7 +10,7 @@ post = '/article/:slug/'
 page = '/:slug/'
 
 [params]
-favicon = '/favicon.ico'
+favicon = 'favicon.ico'
 
 [params.sidebar]
 [params.sidebar.avatar]
