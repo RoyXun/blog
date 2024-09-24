@@ -5,6 +5,7 @@ date = 2024-09-19T20:18:47+08:00
 draft = false
 tags = ['element-plus', 'table']
 categories = ['踩坑心得']
+image = 'cover.png'
 +++
 
 `element-plus` 的 `Table` 组件（特指 v1 版本）不支持配置式渲染表格列，只能通过声明式嵌套 `el-table-column` 来实现表头分组功能：
