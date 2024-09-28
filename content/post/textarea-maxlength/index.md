@@ -5,6 +5,7 @@ date = 2016-12-14T20:14:19+08:00
 draft = false
 categories = ['踩坑心得']
 tags = ['Textarea', 'Maxlength']
+image = 'cover.png'
 +++
 
 做web项目时，我们经常遇到多行文本框限制输入字符的最大长度，并且统计用户输入字数的需求。

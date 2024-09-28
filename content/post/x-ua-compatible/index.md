@@ -4,6 +4,7 @@ slug = 'x-ua-compatible'
 date = 2016-04-13T21:07:37+08:00
 draft = false
 tags = ['浏览器兼容', 'HTML']
+image = 'cover.png'
 +++
 
 为了让IE浏览器使用最高版本文档模式渲染页面，常常在`html` 中加入这句：
