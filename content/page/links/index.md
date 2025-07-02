@@ -23,5 +23,5 @@ menu:
     weight: 50
     params: 
       icon: link
-comment: false
+comments: false
 ---
